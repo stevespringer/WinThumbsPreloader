@@ -27,7 +27,7 @@ namespace WinThumbsPreloader
             try
             {
                 SHCreateItemFromParsingName(filePath, IntPtr.Zero, iIdIShellItem, out shellItem);
-                TBCache.GetThumbnail(shellItem, 128, WTS_FLAGS.WTS_EXTRACTINPROC, out bmp, out cFlags, out bmpId);
+                TBCache.GetThumbnail(shellItem, 128, WTS_FLAGS.WTS_EXTRACT, out bmp, out cFlags, out bmpId);
             }
             catch (Exception)
             {
